@@ -1,0 +1,66 @@
+.invalid-tooltip{
+    position: relative !important;
+    margin-top: 0;
+    opacity: 1;
+    animation: notif .7s linear;
+    color: #fff!important;
+}
+
+@keyframes notif{
+    0%{
+        opacity: 0;
+        margin-top: -15px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.radio-check {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.375em;
+    /* Accessible outline */
+    /* Remove comment to use */
+    /*
+      &:focus-within {
+          outline: .125em solid $primary-color;
+      }
+    */
+}
+.radio-check input {
+    position: absolute;
+    left: -9999px;
+}
+.radio-check input:checked + span {
+    background-color: #d6d6e5;
+}
+.radio-check input:checked + span:before {
+    box-shadow: inset 0 0 0 0.4375em #00005c;
+}
+.radio-check span {
+    display: flex;
+    align-items: center;
+    padding: 0.375em 0.75em 0.375em 0.375em;
+    border-radius: 99em;
+    transition: 0.25s ease;
+}
+.radio-check span:hover {
+    background-color: #d6d6e5;
+}
+.radio-check span:before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.125em #00005c;
+}
